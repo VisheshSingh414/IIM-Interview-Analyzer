@@ -1,4 +1,5 @@
 streamlit
 pdfplumber
-google-generativeai
+google-genai
 requests
+
