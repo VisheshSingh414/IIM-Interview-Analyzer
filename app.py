@@ -69,7 +69,7 @@ if uploaded_file:
 
            webhook_url = "https://visheshsingh-workspace.app.n8n.cloud/webhook/iim-analysis"
 
-            payload = {
+           payload = {
                 "email": recipient_email,
                 "analysis": response.text
             }
@@ -86,5 +86,6 @@ if uploaded_file:
                 st.error(f"Connection error: {e}")
 
                 st.error("Failed to send email")
+
 
 
