@@ -67,7 +67,7 @@ if uploaded_file:
         # Send email via n8n webhook
         if recipient_email:
 
-            webhook_url = "http://localhost:5678/webhook-test/iim-analysis"
+           webhook_url = "https://visheshsingh-workspace.app.n8n.cloud/webhook/iim-analysis"
 
             payload = {
                 "email": recipient_email,
@@ -86,3 +86,4 @@ if uploaded_file:
                 st.error(f"Connection error: {e}")
 
                 st.error("Failed to send email")
+
