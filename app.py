@@ -31,29 +31,29 @@ if uploaded_file:
 
     st.subheader("Extracted Document Text")
     st.write(text)
-         if user_question:
-        
-            prompt = f"""
-            You are an MBA admission advisor.
-        
-            Analyze the candidate profile in the document and answer the user's question.
-        
-            Document:
-            {text}
-        
-            Question:
-            {user_question}
-        
-            Provide:
-            - Candidate profile summary
-            - Strengths
-            - Weaknesses
-            - Chances of getting into top IIMs (High / Medium / Low)
-            - Suggestions to improve the profile
-        
-            Return the response in JSON format.
-            """
-                
+    if user_question:
+
+        prompt = f"""
+        You are an MBA admission advisor.
+    
+        Analyze the candidate profile in the document and answer the user's question.
+    
+        Document:
+        {text}
+    
+        Question:
+        {user_question}
+    
+        Provide:
+        - Candidate profile summary
+        - Strengths
+        - Weaknesses
+        - Chances of getting into top IIMs (High / Medium / Low)
+        - Suggestions to improve the profile
+    
+        Return the response in JSON format.
+        """
+            
 
         with st.spinner("Analyzing CAT profile with AI..."):
 
@@ -86,4 +86,5 @@ if uploaded_file:
                 st.error(f"Connection error: {e}")
 
                 st.error("Failed to send email")
+
 
